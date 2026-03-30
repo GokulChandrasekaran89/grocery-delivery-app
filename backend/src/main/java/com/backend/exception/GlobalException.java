@@ -1,0 +1,11 @@
+package com.backend.exception;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestControllerAdvice
+public class GlobalException {
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<String> handle(RuntimeException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+}
