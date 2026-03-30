@@ -1,36 +1,36 @@
 # Grocery-delivery-app
 ## 📌 Project Overview
 
-This project is a **Full Stack Microservices-based Grocery Delivery Application** that allows users to browse products, place orders, and track deliveries in real time. The system ensures **live inventory synchronization** to avoid stock mismatches.
+This project is a **Full Stack Microservices-based Grocery Delivery Application** built using **React.js and Spring Boot**.
+
+It allows users to browse products, place orders, and ensures **real-time inventory synchronization** to prevent stock mismatches.
 
 ---
 
 ## 🚀 Key Features
 
-* 👤 User Registration & Login (JWT Authentication)
-* 🛍️ Browse Grocery Products
-* 🛒 Add to Cart & Place Orders
+* 👤 User-friendly interface for browsing products
+* 🛍️ Add and manage grocery products
+* 🛒 Place orders easily
 * 📦 Real-Time Inventory Sync
-* 🚚 Order Tracking & Delivery Assignment
-* 🔔 Real-Time Notifications (WebSocket)
-* 🧑‍💼 Admin Product Management
+* ⚡ Fast REST API communication between services
+* ❗ Global Exception Handling
 
 ---
 
 ## 🏗️ Architecture
 
-This project follows **Microservices Architecture**:
+This project follows a **Microservices Architecture**:
 
 ```
-Frontend (React)
+Frontend 
        |
-API Gateway
        |
------------------------------------------
-|        |        |        |            |
-User   Product   Order   Delivery   Notification
-Service Service  Service  Service     Service
+Backend 
 ```
+
+* **Product Service** → Manages products & stock
+* **Order Service** → Handles order placement & reduces stock
 
 ---
 
@@ -45,21 +45,16 @@ Service Service  Service  Service     Service
 ### Backend
 
 * Spring Boot
-* Spring Security (JWT)
 * Spring Data JPA
+* REST APIs
 
 ### Database
 
 * MySQL
 
-### Real-Time
+### Tools
 
-* WebSocket / STOMP
-
-### DevOps
-
-* Docker
-* GitHub
+* Git & GitHub
 
 ---
 
@@ -68,17 +63,12 @@ Service Service  Service  Service     Service
 ```
 grocery-delivery-app/
 │
-├── frontend/                 # React App
-│
 ├── backend/
-│   ├── user-service/
 │   ├── product-service/
-│   ├── order-service/
-│   ├── delivery-service/
-│   ├── notification-service/
-│   └── api-gateway/
+│   └── order-service/
 │
-├── docker-compose.yml
+├── frontend/
+│
 └── README.md
 ```
 
@@ -97,14 +87,19 @@ cd grocery-delivery-app
 
 ### 🔹 2. Backend Setup
 
-For each microservice:
+#### Run Product Service
 
 ```
 cd backend/product-service
 mvn spring-boot:run
 ```
 
-Repeat for all services.
+#### Run Order Service
+
+```
+cd backend/order-service
+mvn spring-boot:run
+```
 
 ---
 
@@ -136,22 +131,17 @@ spring.datasource.password=yourpassword
 
 ---
 
-### 🔹 5. Run with Docker (Optional)
+## 🔄 API Endpoints
 
-```
-docker-compose up --build
-```
-
----
-
-## 🔄 API Endpoints (Sample)
-
-### Product Service
+### 📦 Product Service 
 
 * `GET /products` → Get all products
 * `POST /products` → Add product
+* `POST /products/reduce/{id}/{qty}` → Reduce stock
 
-### Order Service
+---
+
+### 🧾 Order Service 
 
 * `POST /orders` → Place order
 
@@ -165,25 +155,28 @@ When an order is placed:
 stock = stock - ordered_quantity
 ```
 
-Ensures real-time stock updates.
+✔ Ensures real-time stock updates
+✔ Prevents overselling
 
 ---
 
-## 📸 Screenshots (Add Later)
+## 📸 Screenshots
+
+(Add your UI screenshots here)
 
 * Home Page
-* Product Listing
-* Cart Page
-* Order Tracking
+* Add Product Page
+* Order Page
 
 ---
 
 ## 📈 Future Enhancements
 
-* 📱 Mobile App (React Native)
-* 🤖 AI-based Recommendations
-* 📍 Live Delivery Tracking (Maps)
-* ☁️ Cloud Deployment (AWS)
+* 🔐 JWT Authentication
+* 🛒 Cart System
+* 🔔 Real-Time Notifications (WebSocket)
+* 🚚 Delivery Tracking
+* ☁️ Cloud Deployment (AWS / Render)
 
 ---
 
@@ -191,6 +184,5 @@ Ensures real-time stock updates.
 
 **Gokul C**
 
----
----
 
+If you like this project, give it a ⭐ on GitHub!
