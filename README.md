@@ -1,6 +1,7 @@
 # Grocery-delivery-app
 ## 📌 Project Overview
 
+
 This project is a **Full Stack Microservices-based Grocery Delivery Application** built using **React.js and Spring Boot**.
 
 It allows users to browse products, place orders, and ensures **real-time inventory synchronization** to prevent stock mismatches.
@@ -23,10 +24,10 @@ It allows users to browse products, place orders, and ensures **real-time invent
 This project follows a **Microservices Architecture**:
 
 ```
-Frontend 
+Frontend (React)
        |
        |
-Backend 
+Backend  (Sring Boot) 
 ```
 
 * **Product Service** → Manages products & stock
@@ -87,10 +88,11 @@ cd grocery-delivery-app
 
 ### 🔹 2. Backend Setup
 
----
 
+```
 cd backend
 mvn spring-boot:run
+```
 
 ---
 
@@ -124,7 +126,7 @@ spring.datasource.password=yourpassword
 
 ## 🔄 API Endpoints
 
-### 📦 Product Service 
+### 📦 Product Service (Port: 8081)
 
 * `GET /products` → Get all products
 * `POST /products` → Add product
@@ -132,7 +134,7 @@ spring.datasource.password=yourpassword
 
 ---
 
-### 🧾 Order Service 
+### 🧾 Order Service (Port: 8082)
 
 * `POST /orders` → Place order
 
@@ -174,6 +176,8 @@ stock = stock - ordered_quantity
 ## 👨‍💻 Author
 
 **Gokul C**
+
+---
 
 
 If you like this project, give it a ⭐ on GitHub!
