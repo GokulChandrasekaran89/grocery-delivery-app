@@ -1,6 +1,4 @@
-# grocery-delivery-app
-# 🛒 Real-Time Grocery & Essentials Delivery App with Inventory Sync
-
+# Grocery-delivery-app
 ## 📌 Project Overview
 
 This project is a **Full Stack Microservices-based Grocery Delivery Application** that allows users to browse products, place orders, and track deliveries in real time. The system ensures **live inventory synchronization** to avoid stock mismatches.
