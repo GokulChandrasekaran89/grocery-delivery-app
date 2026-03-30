@@ -178,6 +178,3 @@ stock = stock - ordered_quantity
 **Gokul C**
 
 ---
-
-
-If you like this project, give it a ⭐ on GitHub!
