@@ -86,20 +86,10 @@ cd grocery-delivery-app
 ---
 
 ### 🔹 2. Backend Setup
+---
 
-#### Run Product Service
-
-```
-cd backend/product-service
+cd backend
 mvn spring-boot:run
-```
-
-#### Run Order Service
-
-```
-cd backend/order-service
-mvn spring-boot:run
-```
 
 ---
 
