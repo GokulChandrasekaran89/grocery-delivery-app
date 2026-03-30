@@ -86,11 +86,10 @@ cd grocery-delivery-app
 ---
 
 ### 🔹 2. Backend Setup
----
 
+---
 cd backend
 mvn spring-boot:run
-
 ---
 
 ### 🔹 3. Frontend Setup
